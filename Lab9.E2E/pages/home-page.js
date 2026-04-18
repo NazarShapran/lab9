@@ -32,6 +32,6 @@ export class HomePage extends BasePage {
   }
 
   async openSignIn() {
-    await this.signInLink.first().click();
+    await this.signInLink.first().click({ force: true });
   }
 }
