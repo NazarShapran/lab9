@@ -12,22 +12,17 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
   projects: [
-    { name: 'setup', testMatch: /.*\.setup\.js/ },
-
     {
       name: 'chromium',
-      dependencies: ['setup'],
-      use: { ...devices['Desktop Chrome'],  storageState: '.auth/user.json' },
+      use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'firefox',
-      dependencies: ['setup'],
-      use: { ...devices['Desktop Firefox'], storageState: '.auth/user.json' },
+      use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'webkit',
-      dependencies: ['setup'],
-      use: { ...devices['Desktop Safari'],  storageState: '.auth/user.json' },
+      use: { ...devices['Desktop Safari'] },
     },
   ],
 });
